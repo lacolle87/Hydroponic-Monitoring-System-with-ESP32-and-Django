@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block content %}
+<div class="container">
+    <div class="text-center">
+        <h1><i class="fas fa-thermometer-half"></i> Sensor Data</h1>
+    </div>
+    <div id="reading-container">
+        <div class="reading">
+            <h2><i class="fas fa-microchip"></i> Device Name</h2>
+            <p id="device-name" class="value">Loading...</p>
+        </div>
+        <div class="reading">
+            <h2><i class="fas fa-thermometer-three-quarters"></i> Solution Temperature</h2>
+            <p id="solution-temperature" class="value">Loading...</p>
+        </div>
+        <div class="reading">
+            <h2><i class="fas fa-bolt"></i> EC</h2>
+            <p id="ec" class="value">Loading...</p>
+        </div>
+        <div class="reading">
+            <h2><i class="fas fa-tint"></i> pH</h2>
+            <p id="ph" class="value">Loading...</p>
+        </div>
+        <div class="reading">
+            <h2><i class="fas fa-thermometer-empty"></i> Ambient Temperature</h2>
+            <p id="temperature" class="value">Loading...</p>
+        </div>
+        <div class="reading">
+            <h2><i class="fas fa-tint"></i> Humidity</h2>
+            <p id="humidity" class="value">Loading...</p>
+        </div>
+        <div class="reading">
+            <h2><i class="fas fa-clock"></i> Timestamp</h2>
+            <p id="timestamp" class="value">Loading...</p>
+        </div>
+    </div>
+</div>
+
+<script src="{% static 'js/jquery-3.6.3.js' %}"></script>
+<script src="{% static 'js/script.js' %}"></script>
+{% endblock %}
