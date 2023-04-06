@@ -1,3 +1,23 @@
 /venv/
 /project_chili_pepper/config.py
 /hydro/config.py
+
+# Ignore database files
+*.db
+*.sqlite3
+
+# Ignore log files
+*.log
+
+# Ignore compiled Python files
+__pycache__/
+*.pyc
+
+# Ignore secret settings
+*.env
+
+# Ignore IDE files
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
