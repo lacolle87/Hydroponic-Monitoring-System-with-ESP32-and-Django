@@ -1,6 +1,7 @@
 from django.db import models
 from django.conf import settings
 
+
 class SensorData(models.Model):
     device_name = models.CharField(max_length=50)
     sol_temperature = models.FloatField()
@@ -19,4 +20,3 @@ class SensorData(models.Model):
         temperature={self.temperature}, 
         humidity={self.humidity}, 
         timestamp={self.timestamp.strftime(settings.DATETIME_FORMAT)}"""
-

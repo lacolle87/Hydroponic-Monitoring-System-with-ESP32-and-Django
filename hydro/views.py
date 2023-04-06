@@ -8,6 +8,7 @@ import time
 def index(request):
     return render(request, 'hydro/index.html')
 
+
 def get_latest_data(request):
     time.sleep(1)
     latest_data = SensorData.objects.order_by('-timestamp').first()
@@ -21,5 +22,6 @@ def get_latest_data(request):
         'timestamp': latest_data.timestamp.strftime('%Y-%m-%d %H:%M:%S')
     }
     return JsonResponse(data)
+
 
 mqtt_client.mqtt_client()

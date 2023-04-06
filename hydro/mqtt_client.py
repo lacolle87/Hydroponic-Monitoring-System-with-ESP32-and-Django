@@ -2,12 +2,13 @@ import json
 import paho.mqtt.client as mqtt
 from django.utils import timezone
 from .models import SensorData
-
-MQTT_SERVER = "192.168.1.87"
-MQTT_PORT = 1883
-MQTT_USERNAME = "doggo"
-MQTT_PASSWORD = "doggo1987"
-MQTT_TOPIC = "habanero1"
+from .config import (
+    MQTT_SERVER,
+    MQTT_PORT,
+    MQTT_USERNAME,
+    MQTT_PASSWORD,
+    MQTT_TOPIC,
+)
 
 
 def on_connect(client, userdata, flags, rc):
